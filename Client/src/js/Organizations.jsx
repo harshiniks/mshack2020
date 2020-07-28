@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {gituser, octokit} from "../config/GitApiConstants";
 
 class Organizations extends React.Component {
   constructor(props) {
@@ -8,34 +9,24 @@ class Organizations extends React.Component {
         organisations : []
     }
   }
-  componentDidMount() {
-    this.setState({
-        organisations: [
-            {
-                id: 1,
-                name: "Microsoft",
-                image: "resources/microsoft.png"
-            },
-            {
-                id: 2,
-                name: "Github",
-                image: "resources/docs.png"
-            },
-            {
-                id: 3,
-                name: "Github-interviews",
-                image: "resources/github-interviews.png"
-            },
-            {
-                id: 4,
-                name: "Docs",
-                image: "resources/docs.png"
-            }
-        ]
-    })
+  async componentDidMount() {
+    const res = await octokit.request('GET /users/'+gituser+'/orgs');
+    let tmpOrgs = [];
+    if (res && res.data && res.data.length > 0) {
+        res.data.map(org => {
+            tmpOrgs.push({
+                id: org.id,
+                name: org.login,
+                image: org.avatar_url
+            })
+        });
+        this.setState({
+            organisations: tmpOrgs
+        });
+    }
   }
   getImage(org) {
-    return (<img key={org.id} src={`${process.env.PUBLIC_URL +org.image}`} alt={org.name} />);
+    return (<img key={org.id} src={org.image} alt={org.name} height="70"/>);
   }
   render() {
     return (

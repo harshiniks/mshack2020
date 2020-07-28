@@ -1,20 +1,30 @@
 import React from 'react';
+import {octokit} from "../config/GitApiConstants";
+import { Link } from 'react-router-dom';
 
 class Team extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
         org: props.location.org,
-        team : []
+        teams : []
     }
   }
-  componentWillMount() {
+  async componentDidMount() {
     if (this.state.org && this.state.org.id) {
-        for (let i =1; i<5; i++) {
-            this.state.team.push({
-                id : this.state.org.id+i,
-                name: this.state.org.name+' employee '+i
-            })
+        const res = await octokit.request('GET /orgs/'+this.state.org.name+'/teams');
+        let tmpTeams = [];
+        if (res && res.data && res.data.length > 0) {
+            res.data.map(team => {
+                tmpTeams.push({
+                    id: team.id,
+                    name: team.name,
+                    url: team.url
+                })
+            });
+            this.setState({
+                teams: tmpTeams
+            });
         }
     }
   }
@@ -27,11 +37,15 @@ class Team extends React.Component {
                 <table className="center">
                     <tbody>
                         {
-                        this.state.team.map((u) => {
+                        this.state.teams.map((u) => {
                             return (
                                 <tr>
                                     <td>{u.name}</td>
-                                    <td><button className="kudosbutton">Give Kudos</button></td>
+                                    <td>
+                                        <Link style={{color: "blue"}} to={ {pathname:"/Members", team:u}}>
+                                            Members
+                                        </Link>
+                                    </td>
                                 </tr>
                             );
                         })

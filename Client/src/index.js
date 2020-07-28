@@ -6,6 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Organizations from './js/Organizations.jsx';
 import Team from './js/Team';
+import TeamMembers from './js/TeamMembers';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -13,6 +14,7 @@ ReactDOM.render(
      <Route exact path="/" component={App} />
      <Route path="/Organizations" component={Organizations} />
      <Route path="/Team" component={Team} />
+     <Route path="/Members" component={TeamMembers} />
    </Switch>
    </BrowserRouter>,
   document.getElementById('root')
