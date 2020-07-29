@@ -194,3 +194,7 @@ table.center {
 .table-list-cell-link {
   color: blue;
 }
+
+.kudo-message {
+  font-size: 20px;
+}

@@ -49,8 +49,9 @@ class MemberKudos extends React.Component {
                             this.state.kudos.map((kudo) => {
                                 return (
                                     <li className="table-list-item">
+                                        <div className="table-list-cell member-avatar-cell">{this.getImage(this.state.receiverMember)}</div>
                                         <div className="table-list-cell member-name">{kudo.giverMemberId}</div>
-                                        <div className="table-list-cell">{kudo.message}</div>
+                                        <div className="table-list-cell kudo-message">{kudo.message}</div>
                                     </li>
                                 );
                             })
