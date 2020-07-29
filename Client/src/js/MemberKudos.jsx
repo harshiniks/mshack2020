@@ -5,25 +5,25 @@ class MemberKudos extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            giverMemberId: 'test',
+            giverMemberName: 'chandrasekharmudili',
             receiverMember: props.location.receiverMember,
             kudos: []
         }
     }
     async componentDidMount() {
-        if (this.state.giverMemberId && this.state.receiverMember) {
+        if (this.state.giverMemberName && this.state.receiverMember) {
             // const res = await octokit.request('GET ' + this.state.receiverMember.id + '/kudos');
             let tmpKudos = [{giverMemberId: 'User1', message: 'Ahoy'}, {giverMemberId: 'User2', message: 'Hola'}];
             // if (res && res.data && res.data.length > 0) {
-                // res.data.map(kudo => {
-                //     tmpKudos.push({
-                //         giverMemberId: kudo.giverMemberId,
-                //         message: kudo.message
-                //     })
-                // });
-                this.setState({
-                    kudos: tmpKudos
-                });
+            // res.data.map(kudo => {
+            //     tmpKudos.push({
+            //         giverMemberId: kudo.giverMemberId,
+            //         message: kudo.message
+            //     })
+            // });
+            this.setState({
+                kudos: tmpKudos
+            });
             // }
         }
     }
@@ -33,9 +33,14 @@ class MemberKudos extends React.Component {
     render() {
         return (
             <div className="App">
-                <div className="table-list-header">
+                <div className="table-list-header table-list-large-header">
                     <div className="table-list-header-item">
-                        {this.state.receiverMember.name}
+                        <div className="member-avatar-cell">{this.getImage(this.state.receiverMember)}</div>
+                        <div>{this.state.receiverMember.name}</div>
+                    </div>
+                    <div className="table-list-header-item">
+                        <input className="kudos-input width-full" placeholder="Enter a message..."></input>
+                        <button className="kudos-button btn btn-primary">Give Kudos</button>
                     </div>
                 </div>
                 <div>

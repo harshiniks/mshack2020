@@ -58,15 +58,27 @@ table.center {
   background-color: #f6f8fa;
   border: 1px solid #e1e4e8;
   border-radius: 6px 6px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.table-list-large-header {
+  height: 80px;
 }
 
 .table-list-header-item {
   padding-left: 16px;
-  float: left;
   color: #24292e;
   font-weight: 600;
   padding-top: 13px;
   padding-bottom: 13px;
+  display: flex;
+  align-items: center;
+}
+
+.table-list-header-item:last-child {
+  padding-right: 16px;
 }
 
 .table-list {
@@ -127,6 +139,21 @@ table.center {
 
 .kudos-button {
   float: right;
+}
+
+.kudos-input {
+  width: 500px;
+  padding: 5px 12px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #24292e;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  outline: none;
+  margin-right: 10px;
 }
 
 .btn-primary {
