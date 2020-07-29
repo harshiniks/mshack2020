@@ -1,5 +1,6 @@
 import React from 'react';
 import { octokit } from "../config/GitApiConstants";
+import { Link } from 'react-router-dom';
 
 class TeamMembers extends React.Component {
     constructor(props) {
@@ -47,7 +48,9 @@ class TeamMembers extends React.Component {
                                         <div className="table-list-cell member-avatar-cell">{this.getImage(u)}</div>
                                         <div className="table-list-cell member-name">{u.name}</div>
                                         <div  className="table-list-cell">
-                                            <button className="kudos-button btn btn-primary">Kudos</button>
+                                            <Link to={{ pathname: "/MemberKudos", receiverMember: u }}>
+                                                <button className="kudos-button btn btn-primary">Kudos</button>
+                                            </Link>
                                         </div>
                                     </li>
                                 );
