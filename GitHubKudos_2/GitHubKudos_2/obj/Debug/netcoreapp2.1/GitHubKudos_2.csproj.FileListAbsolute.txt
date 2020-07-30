@@ -1,0 +1,14 @@
+C:\Users\anugupt\source\repos\GitHubKudos_2\GitHubKudos_2\bin\Debug\netcoreapp2.1\GitHubKudos_2.deps.json
+C:\Users\anugupt\source\repos\GitHubKudos_2\GitHubKudos_2\bin\Debug\netcoreapp2.1\GitHubKudos_2.runtimeconfig.json
+C:\Users\anugupt\source\repos\GitHubKudos_2\GitHubKudos_2\bin\Debug\netcoreapp2.1\GitHubKudos_2.runtimeconfig.dev.json
+C:\Users\anugupt\source\repos\GitHubKudos_2\GitHubKudos_2\bin\Debug\netcoreapp2.1\GitHubKudos_2.dll
+C:\Users\anugupt\source\repos\GitHubKudos_2\GitHubKudos_2\obj\Debug\netcoreapp2.1\GitHubKudos_2.csproj.CoreCompileInputs.cache
+C:\Users\anugupt\source\repos\GitHubKudos_2\GitHubKudos_2\obj\Debug\netcoreapp2.1\GitHubKudos_2.RazorAssemblyInfo.cache
+C:\Users\anugupt\source\repos\GitHubKudos_2\GitHubKudos_2\obj\Debug\netcoreapp2.1\GitHubKudos_2.RazorAssemblyInfo.cs
+C:\Users\anugupt\source\repos\GitHubKudos_2\GitHubKudos_2\obj\Debug\netcoreapp2.1\GitHubKudos_2.AssemblyInfoInputs.cache
+C:\Users\anugupt\source\repos\GitHubKudos_2\GitHubKudos_2\obj\Debug\netcoreapp2.1\GitHubKudos_2.AssemblyInfo.cs
+C:\Users\anugupt\source\repos\GitHubKudos_2\GitHubKudos_2\obj\Debug\netcoreapp2.1\GitHubKudos_2.RazorTargetAssemblyInfo.cache
+C:\Users\anugupt\source\repos\GitHubKudos_2\GitHubKudos_2\bin\Debug\netcoreapp2.1\GitHubKudos_2.pdb
+C:\Users\anugupt\source\repos\GitHubKudos_2\GitHubKudos_2\obj\Debug\netcoreapp2.1\GitHubKudos_2.dll
+C:\Users\anugupt\source\repos\GitHubKudos_2\GitHubKudos_2\obj\Debug\netcoreapp2.1\GitHubKudos_2.pdb
+C:\Users\anugupt\source\repos\GitHubKudos_2\GitHubKudos_2\obj\Debug\netcoreapp2.1\GitHubKudos_2.csprojAssemblyReference.cache
